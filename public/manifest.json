@@ -1,7 +1,7 @@
 {
-  "short_name": "Gerami",
-  "name": "Kelal's Gerami",
-  "description": "Demo of all Kelal's Gerami components using React.",
+  "short_name": "gerami Docs",
+  "name": "gerami | Docs",
+  "description": "gerami react components | Documentation",
   "icons": [
     {
       "src": "favicon.ico",
