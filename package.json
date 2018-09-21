@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0",
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "@types/dotenv": "^4.0.3",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.5",
