@@ -10,6 +10,7 @@ import {
   FlexSpacer,
   Image,
   Page,
+  Range,
   Loading,
   MenuDrop,
   MenuItem,
@@ -211,6 +212,20 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <br />
             <br />
             <Page>This is a Page.</Page>
+          </Block>
+
+          <hr />
+
+          <Block first last>
+            <code>Range:</code>
+            <br />
+            <br />
+            <Range
+              absoluteMin={14}
+              absoluteMax={42}
+              inputMin={28}
+              inputMax={35}
+            />
           </Block>
 
           <hr />
