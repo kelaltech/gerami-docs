@@ -6,10 +6,10 @@ import {
   Button,
   Card,
   Content,
+  Drawer,
   FlexSpacer,
   Image,
   Page,
-  LeftDrawer,
   Loading,
   MenuDrop,
   MenuItem,
@@ -19,19 +19,23 @@ import {
 } from 'gerami'
 import KelalTechLogo from '../../_assets/images/kelal-tech-logo.svg'
 
-export class Home extends Component<
-  RouteComponentProps<{}>,
-  { isDrawerOpen: boolean; isMenuDropOpen: boolean }
-> {
+interface IHomeState {
+  isLeftDrawerOpen: boolean
+  isRightDrawerOpen: boolean
+  isMenuDropOpen: boolean
+}
+
+export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
   state = {
-    isDrawerOpen: false,
+    isLeftDrawerOpen: false,
+    isRightDrawerOpen: false,
     isMenuDropOpen: false
   }
 
   boxStyle = { width: 70, height: 70 }
 
   render() {
-    const { isDrawerOpen, isMenuDropOpen } = this.state
+    const { isLeftDrawerOpen, isRightDrawerOpen, isMenuDropOpen } = this.state
 
     return (
       <Page top={'auto'} bottom={'auto'}>
@@ -49,7 +53,7 @@ export class Home extends Component<
             <code>Anchor:</code>
             <br />
             <br />
-            <Anchor href="">Just an Anchor.</Anchor>
+            <Anchor href="">This is an Anchor.</Anchor>
           </Block>
 
           <hr />
@@ -58,7 +62,7 @@ export class Home extends Component<
             <code>Block:</code>
             <br />
             <br />
-            <Block>Just a Block.</Block>
+            <Block>This is a Block.</Block>
           </Block>
 
           <hr />
@@ -67,7 +71,7 @@ export class Home extends Component<
             <code>Button:</code>
             <br />
             <br />
-            <Button>Just a Button.</Button>
+            <Button>This is a Button.</Button>
           </Block>
 
           <hr />
@@ -86,7 +90,7 @@ export class Home extends Component<
                 <Anchor>Action Anchor</Anchor>
               ]}
             >
-              Just a Card.
+              This is a Card.
             </Card>
           </Block>
 
@@ -96,7 +100,42 @@ export class Home extends Component<
             <code>Content:</code>
             <br />
             <br />
-            <Content>Just a Content.</Content>
+            <Content>This is a Content.</Content>
+          </Block>
+
+          <hr />
+
+          <Block first last>
+            <code>Drawer:</code>
+            <br />
+            <br />
+            <div style={{ display: 'flex' }}>
+              <Button onClick={() => this.setState({ isLeftDrawerOpen: true })}>
+                Open Left Drawer
+              </Button>
+              <FlexSpacer />
+              <Button
+                onClick={() => this.setState({ isRightDrawerOpen: true })}
+              >
+                Open Right Drawer
+              </Button>
+            </div>
+            <Drawer
+              align={'left'}
+              onClose={() => this.setState({ isLeftDrawerOpen: false })}
+              open={isLeftDrawerOpen}
+              size={'M'}
+            >
+              This is a Left Drawer.
+            </Drawer>
+            <Drawer
+              align={'right'}
+              onClose={() => this.setState({ isRightDrawerOpen: false })}
+              open={isRightDrawerOpen}
+              size={'M'}
+            >
+              This is a Right Drawer.
+            </Drawer>
           </Block>
 
           <hr />
@@ -120,7 +159,12 @@ export class Home extends Component<
             <code>Image:</code>
             <br />
             <br />
-            <Image src={KelalTechLogo} style={this.boxStyle} />
+            <Image
+              src={KelalTechLogo}
+              style={this.boxStyle}
+              title={`kelal tech.'s Logo`}
+              to={true}
+            />
           </Block>
 
           <hr />
@@ -129,25 +173,7 @@ export class Home extends Component<
             <code>Input:</code>
             <br />
             <br />
-            <Input label="Just an Input." />
-          </Block>
-
-          <hr />
-
-          <Block first last>
-            <code>LeftDrawer:</code>
-            <br />
-            <br />
-            <Button onClick={() => this.setState({ isDrawerOpen: true })}>
-              Open LeftDrawer
-            </Button>
-            <LeftDrawer
-              onClose={() => this.setState({ isDrawerOpen: false })}
-              open={isDrawerOpen}
-              size={'M'}
-            >
-              Just a LeftDrawer.
-            </LeftDrawer>
+            <Input label="This is an Input." />
           </Block>
 
           <hr />
@@ -173,7 +199,7 @@ export class Home extends Component<
               open={isMenuDropOpen}
               size={'L'}
             >
-              <MenuItem>Just a MenuItem.</MenuItem>
+              <MenuItem>This is a MenuItem.</MenuItem>
               <MenuItem>Inside a MenuDrop.</MenuItem>
             </MenuDrop>
           </Block>
@@ -184,7 +210,7 @@ export class Home extends Component<
             <code>Page:</code>
             <br />
             <br />
-            <Page>Just a Page.</Page>
+            <Page>This is a Page.</Page>
           </Block>
 
           <hr />
@@ -193,7 +219,7 @@ export class Home extends Component<
             <code>TextArea:</code>
             <br />
             <br />
-            <TextArea label="Just a TextArea." />
+            <TextArea label="This is a TextArea." />
           </Block>
 
           <hr />
@@ -202,7 +228,7 @@ export class Home extends Component<
             <code>Warning:</code>
             <br />
             <br />
-            <Warning shy problem="Just a Warning." />
+            <Warning shy problem="This is a Warning." />
           </Block>
         </Content>
       </Page>
