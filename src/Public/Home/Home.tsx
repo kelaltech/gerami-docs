@@ -91,23 +91,61 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           </Block>
 
           <Block>
-            <code>Button:</code>
-            <div className={'padding-vertical-normal'} />
-            <Select
-              options={[
-                'Ethiopia',
-                'Nigeria',
-                'Kenya',
-                'Uganda',
-                'Somalia',
-                'Zambia',
-                'Congo',
-                'Malawi'
-              ]}
-              placeholder={'Choose your country....'}
-              selectedvalue={this.handleSelect}
-              multiple={true}
-            />
+            <Block>
+              <code>Select box:</code>
+            </Block>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                justifyContent: 'space-around'
+              }}
+            >
+              <div>
+                <code>Single:</code>
+                <div className={'padding-vertical-normal'} />
+                <Select
+                  options={[
+                    'Ethiopia',
+                    'Nigeria',
+                    'Kenya',
+                    'Uganda',
+                    'Somalia',
+                    'Zambia',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Malawi'
+                  ]}
+                  placeholder={'Choose your country....'}
+                  selectedvalue={this.handleSelect}
+                />
+              </div>
+              <div>
+                <code>Multiple:</code>
+                <div className={'padding-vertical-normal'} />
+                <Select
+                  options={[
+                    'Ethiopia',
+                    'Nigeria',
+                    'Kenya',
+                    'Uganda',
+                    'Somalia',
+                    'Zambia',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Malawi'
+                  ]}
+                  placeholder={'Choose your country....'}
+                  selectedvalue={this.handleSelect}
+                  multiple={true}
+                />
+              </div>
+            </div>
           </Block>
 
           <Block first last>
