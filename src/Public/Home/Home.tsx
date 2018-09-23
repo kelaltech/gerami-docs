@@ -24,63 +24,71 @@ interface IHomeState {
   isLeftDrawerOpen: boolean
   isRightDrawerOpen: boolean
   isMenuDropOpen: boolean
+  rangeMin: number
+  rangeMax: number
 }
 
 export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
   state = {
     isLeftDrawerOpen: false,
     isRightDrawerOpen: false,
-    isMenuDropOpen: false
+    isMenuDropOpen: false,
+    rangeMin: 22,
+    rangeMax: 28
   }
 
   boxStyle = { width: 70, height: 70 }
 
   render() {
-    const { isLeftDrawerOpen, isRightDrawerOpen, isMenuDropOpen } = this.state
+    const {
+      isLeftDrawerOpen,
+      isRightDrawerOpen,
+      isMenuDropOpen,
+      rangeMin,
+      rangeMax
+    } = this.state
 
     return (
-      <Page top={'auto'} bottom={'auto'}>
-        <Content size="M">
+      <Page top={'auto'}>
+        <Content size={'L'}>
           <Block first last>
-            <h1>gerami</h1>
-            <div>
-              <small>gerami react components</small>
-            </div>
+            <h3 className={'fg-blackish'}>The Components</h3>
+            <hr />
           </Block>
 
-          <hr />
-
-          <Block first last>
+          <Block>
             <code>Anchor:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Anchor href="">This is an Anchor.</Anchor>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Block:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Block>This is a Block.</Block>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Button:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Button>This is a Button.</Button>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Card:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Card
               imgSrc={'https://loremflickr.com/600/800/person,face/all'}
               title={'Card Title'}
@@ -95,21 +103,23 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </Card>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Content:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Content>This is a Content.</Content>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Drawer:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <div style={{ display: 'flex' }}>
               <Button onClick={() => this.setState({ isLeftDrawerOpen: true })}>
                 Open Left Drawer
@@ -139,12 +149,13 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </Drawer>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>FlexSpacer:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <div style={{ display: 'flex' }}>
               left
               <FlexSpacer />
@@ -154,12 +165,13 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </div>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Image:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Image
               src={KelalTechLogo}
               style={this.boxStyle}
@@ -168,30 +180,33 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             />
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Input:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Input label="This is an Input." />
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Loading:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Loading delay />
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>MenuDrop &amp; MenuItem:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Button onClick={() => this.setState({ isMenuDropOpen: true })}>
               Open MenuDrop
             </Button>
@@ -205,46 +220,54 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </MenuDrop>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Page:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Page>This is a Page.</Page>
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Range:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Range
               absoluteMin={14}
               absoluteMax={42}
-              inputMin={28}
-              inputMax={35}
+              inputMin={rangeMin}
+              inputMax={rangeMax}
+              roundValues
+              onMoved={e => this.setState({ rangeMin: e.min, rangeMax: e.max })}
             />
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>TextArea:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <TextArea label="This is a TextArea." />
           </Block>
 
-          <hr />
-
           <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Warning:</code>
-            <br />
-            <br />
+            <div className={'padding-vertical-normal'} />
             <Warning shy problem="This is a Warning." />
           </Block>
+
+          <Block last />
         </Content>
       </Page>
     )

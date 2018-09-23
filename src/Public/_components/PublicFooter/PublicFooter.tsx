@@ -3,6 +3,10 @@ import { Block } from 'gerami'
 
 export class PublicFooter extends Component {
   render() {
-    return <Block>&copy; Kelal, 2018.</Block>
+    return (
+      <Block last className={'center font-S fg-blackish'}>
+        &copy; kelal tech., 2018.
+      </Block>
+    )
   }
 }
