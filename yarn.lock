@@ -2946,10 +2946,11 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
-gerami@latest:
+"gerami@https://gitlab.com/kelal/_dev/gerami.git":
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gerami/-/gerami-0.0.3.tgz#20a5d2e6e50931c5f417766cb2c33e51f043c0dd"
+  resolved "https://gitlab.com/kelal/_dev/gerami.git#bd584a45b047ef42cd21c4f9eb72dc7f443be278"
   dependencies:
+    "@fortawesome/fontawesome-free" "^5.3.1"
     react-router-dom "^4.3.1"
 
 get-caller-file@^1.0.1:
