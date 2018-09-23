@@ -16,7 +16,8 @@ import {
   MenuItem,
   Input,
   TextArea,
-  Warning
+  Warning,
+  Yoga
 } from 'gerami'
 import KelalTechLogo from '../../_assets/images/kelal-tech-logo.svg'
 
@@ -265,6 +266,22 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <code>Warning:</code>
             <div className={'padding-vertical-normal'} />
             <Warning shy problem="This is a Warning." />
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
+            <code>Yoga:</code>
+            <div className={'padding-vertical-normal'} />
+            <Yoga maxCol={3}>
+              <Content>Element 1</Content>
+              <Content>Element 2</Content>
+              <Content>Element 3</Content>
+              <Content>Element 4</Content>
+              <Content>Element 5</Content>
+            </Yoga>
           </Block>
 
           <Block last />
