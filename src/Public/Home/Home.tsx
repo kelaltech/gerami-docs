@@ -17,6 +17,7 @@ import {
   Input,
   TextArea,
   Warning,
+  Select,
   Yoga
 } from 'gerami'
 import KelalTechLogo from '../../_assets/images/kelal-tech-logo.svg'
@@ -39,7 +40,9 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
   }
 
   boxStyle = { width: 70, height: 70 }
-
+  handleSelect = (value: any) => {
+    console.log(value)
+  }
   render() {
     const {
       isLeftDrawerOpen,
@@ -87,6 +90,29 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <hr />
           </Block>
 
+          <Block>
+            <code>Button:</code>
+            <div className={'padding-vertical-normal'} />
+            <Select
+              options={[
+                'Ethiopia',
+                'Nigeria',
+                'Kenya',
+                'Uganda',
+                'Somalia',
+                'Zambia',
+                'Congo',
+                'Malawi'
+              ]}
+              placeholder={'Choose your country....'}
+              selectedvalue={this.handleSelect}
+              multiple={true}
+            />
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
           <Block>
             <code>Card:</code>
             <div className={'padding-vertical-normal'} />
