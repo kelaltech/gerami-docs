@@ -2948,7 +2948,7 @@ gaze@^1.0.0:
 
 "gerami@https://gitlab.com/kelal/_dev/gerami.git":
   version "0.0.3"
-  resolved "https://gitlab.com/kelal/_dev/gerami.git#973722290040d18f90f2844118c25092e9f8c319"
+  resolved "https://gitlab.com/kelal/_dev/gerami.git#f18b45639a95ccad56b1d0e2c516424fd299e88f"
   dependencies:
     "@fortawesome/fontawesome-free" "^5.3.1"
     react-router-dom "^4.3.1"
