@@ -5,8 +5,11 @@ import {
   Block,
   Button,
   Card,
+  CheckBox,
+  Container,
   Content,
   Drawer,
+  Flex,
   FlexSpacer,
   Image,
   Page,
@@ -151,6 +154,52 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block first last>
             <hr />
           </Block>
+
+          <Block>
+            <code>Container</code>
+
+            <Page>
+              <div>
+                Div inside Page Component <br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
+                facilis laudantium possimus provident quibusdam reiciendis
+                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
+                laudantium?
+              </div>
+              <br />
+              <Container>
+                <div>
+                  Div inside a Container Component
+                  <br />
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
+                  facilis laudantium possimus provident quibusdam reiciendis
+                  repellendus soluta, tempora temporibus tenetur vel! Excepturi,
+                  laudantium?
+                </div>
+              </Container>
+            </Page>
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
+            <code>CheckBox</code> <br />
+            <br />
+            Checked
+            <CheckBox checked={true} className={'checked'} />
+            <br />
+            Unchecked
+            <CheckBox checked={false} className={'unchecked'} />
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
           <Block>
             <code>Card:</code>
             <div className={'padding-vertical-normal'} />
@@ -212,6 +261,42 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             >
               This is a Right Drawer.
             </Drawer>
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
+            <code>Flex:</code>
+            <div className={'padding-vertical-normal'} />
+            <Flex>
+              <div>
+                Div 1<br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
+                facilis laudantium possimus provident quibusdam reiciendis
+                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
+                laudantium?
+              </div>
+              <br />
+              <div>
+                Div 2<br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
+                facilis laudantium possimus provident quibusdam reiciendis
+                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
+                laudantium?
+              </div>
+              <div>
+                Div 3<br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
+                facilis laudantium possimus provident quibusdam reiciendis
+                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
+                laudantium?
+              </div>
+            </Flex>
           </Block>
 
           <Block first last>
