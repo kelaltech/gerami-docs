@@ -73,7 +73,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "clean": "node_modules/.bin/del build",
     "lint": "prettier ./{*,src/**/*}.{tsx,ts,jsx,js,scss,sass,css,json,md} --write",
-    "precommit": "yarn lint && git add -u"
+    "precommit": "yarn lint && git update-index --again"
   },
   "jest": {
     "collectCoverageFrom": [
