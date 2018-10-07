@@ -1,6 +1,6 @@
 {
-  "short_name": "gerami Docs",
-  "name": "gerami | Docs",
+  "short_name": "gerami",
+  "name": "gerami Docs",
   "description": "gerami react components | Documentation",
   "icons": [
     {
@@ -16,6 +16,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#00B478",
+  "theme_color": "#0078B4",
   "background_color": "#f2f2f2"
 }
