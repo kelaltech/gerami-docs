@@ -12,18 +12,25 @@ import {
   Flex,
   FlexSpacer,
   Image,
+  ImageInput,
   Page,
   Range,
   Loading,
   MenuDrop,
   MenuItem,
   Input,
+  SlideShow,
   TextArea,
   Warning,
   Select,
   Yoga
 } from 'gerami'
 import KelalTechLogo from '../../_assets/images/kelal-tech-logo.svg'
+import pic1 from '../../_assets/images/pic-1.jpg'
+import pic2 from '../../_assets/images/pic-2.jpg'
+import pic3 from '../../_assets/images/pic-3.jpg'
+import pic4 from '../../_assets/images/pic-4.jpg'
+import pic5 from '../../_assets/images/pic-5.jpg'
 
 interface IHomeState {
   isLeftDrawerOpen: boolean
@@ -38,8 +45,8 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
     isLeftDrawerOpen: false,
     isRightDrawerOpen: false,
     isMenuDropOpen: false,
-    rangeMin: 22,
-    rangeMax: 28
+    rangeMin: 15,
+    rangeMax: 19
   }
 
   boxStyle = { width: 70, height: 70 }
@@ -247,7 +254,11 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </div>
             <Drawer
               align={'left'}
-              onClose={() => this.setState({ isLeftDrawerOpen: false })}
+              onClose={() =>
+                this.setState({
+                  isLeftDrawerOpen: false
+                })
+              }
               open={isLeftDrawerOpen}
               size={'M'}
             >
@@ -255,7 +266,11 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             </Drawer>
             <Drawer
               align={'right'}
-              onClose={() => this.setState({ isRightDrawerOpen: false })}
+              onClose={() =>
+                this.setState({
+                  isRightDrawerOpen: false
+                })
+              }
               open={isRightDrawerOpen}
               size={'M'}
             >
@@ -345,6 +360,15 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           </Block>
 
           <Block>
+            <code> Image Input </code>
+            <ImageInput />
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Loading:</code>
             <div className={'padding-vertical-normal'} />
             <Loading delay />
@@ -361,7 +385,11 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               Open MenuDrop
             </Button>
             <MenuDrop
-              onClose={() => this.setState({ isMenuDropOpen: false })}
+              onClose={() =>
+                this.setState({
+                  isMenuDropOpen: false
+                })
+              }
               open={isMenuDropOpen}
               size={'L'}
             >
@@ -385,11 +413,33 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           </Block>
 
           <Block>
+            <code>Slide show</code>
+            <SlideShow
+              Images={[
+                { Image: pic1, Caption: '' },
+                { Image: pic2, Caption: '' },
+                { Image: pic3, Caption: '' },
+                { Image: pic4, Caption: '' },
+                { Image: pic5, Caption: '' }
+              ]}
+              height={'200px'}
+              autoplay={true}
+              showControls={true}
+              interval={5000}
+              animation={'fade'}
+            />
+          </Block>
+
+          <Block first last>
+            <hr />
+          </Block>
+
+          <Block>
             <code>Range:</code>
             <div className={'padding-vertical-normal'} />
             <Range
               absoluteMin={14}
-              absoluteMax={42}
+              absoluteMax={20}
               inputMin={rangeMin}
               inputMax={rangeMax}
               roundValues
