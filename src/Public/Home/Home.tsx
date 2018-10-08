@@ -70,143 +70,37 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <hr />
           </Block>
 
+          {/* Anchor */}
           <Block>
             <code>Anchor:</code>
             <div className={'padding-vertical-normal'} />
             <Anchor href="">This is an Anchor.</Anchor>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Block */}
           <Block>
             <code>Block:</code>
             <div className={'padding-vertical-normal'} />
             <Block>This is a Block.</Block>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Button */}
           <Block>
             <code>Button:</code>
             <div className={'padding-vertical-normal'} />
             <Button>This is a Button.</Button>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
-          <Block>
-            <Block>
-              <code>Select box:</code>
-            </Block>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                justifyContent: 'space-around'
-              }}
-            >
-              <div>
-                <code>Single:</code>
-                <div className={'padding-vertical-normal'} />
-                <Select
-                  options={[
-                    'Ethiopia',
-                    'Nigeria',
-                    'Kenya',
-                    'Uganda',
-                    'Somalia',
-                    'Zambia',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Malawi'
-                  ]}
-                  placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
-                />
-              </div>
-              <div>
-                <code>Multiple:</code>
-                <div className={'padding-vertical-normal'} />
-                <Select
-                  options={[
-                    'Ethiopia',
-                    'Nigeria',
-                    'Kenya',
-                    'Uganda',
-                    'Somalia',
-                    'Zambia',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Malawi'
-                  ]}
-                  placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
-                  multiple={true}
-                />
-              </div>
-            </div>
-          </Block>
-
-          <Block first last>
-            <hr />
-          </Block>
-
-          <Block>
-            <code>Container</code>
-
-            <Page>
-              <div>
-                Div inside Page Component <br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
-                facilis laudantium possimus provident quibusdam reiciendis
-                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
-                laudantium?
-              </div>
-              <br />
-              <Container>
-                <div>
-                  Div inside a Container Component
-                  <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
-                  facilis laudantium possimus provident quibusdam reiciendis
-                  repellendus soluta, tempora temporibus tenetur vel! Excepturi,
-                  laudantium?
-                </div>
-              </Container>
-            </Page>
-          </Block>
-
-          <Block first last>
-            <hr />
-          </Block>
-
-          <Block>
-            <code>CheckBox</code> <br />
-            <br />
-            Checked
-            <CheckBox checked={true} className={'checked'} />
-            <br />
-            Unchecked
-            <CheckBox checked={false} className={'unchecked'} />
-          </Block>
-
-          <Block first last>
-            <hr />
-          </Block>
-
+          {/* Card */}
           <Block>
             <code>Card:</code>
             <div className={'padding-vertical-normal'} />
@@ -223,21 +117,45 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               This is a Card.
             </Card>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Checkbox */}
+          <Block>
+            <code>CheckBox</code> <br />
+            <br />
+            Checked
+            <CheckBox checked={true} className={'checked'} />
+            <br />
+            Unchecked
+            <CheckBox checked={false} className={'unchecked'} />
+          </Block>
+          <Block first last>
+            <hr />
+          </Block>
+
+          {/* Container */}
+          <Block>
+            <code>Container:</code>
+            <div className={'padding-vertical-normal'} />
+            <Container>This is a Container.</Container>
+          </Block>
+          <Block first last>
+            <hr />
+          </Block>
+
+          {/* Content */}
           <Block>
             <code>Content:</code>
             <div className={'padding-vertical-normal'} />
             <Content>This is a Content.</Content>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Drawer */}
           <Block>
             <code>Drawer:</code>
             <div className={'padding-vertical-normal'} />
@@ -277,47 +195,27 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               This is a Right Drawer.
             </Drawer>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Flex */}
           <Block>
             <code>Flex:</code>
             <div className={'padding-vertical-normal'} />
             <Flex>
-              <div>
-                Div 1<br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
-                facilis laudantium possimus provident quibusdam reiciendis
-                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
-                laudantium?
-              </div>
-              <br />
-              <div>
-                Div 2<br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
-                facilis laudantium possimus provident quibusdam reiciendis
-                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
-                laudantium?
-              </div>
-              <div>
-                Div 3<br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquid, dicta dignissimos dolorem doloremque ea eaque enim
-                facilis laudantium possimus provident quibusdam reiciendis
-                repellendus soluta, tempora temporibus tenetur vel! Excepturi,
-                laudantium?
-              </div>
+              <Content>Element 1</Content>
+              <Content>Element 2</Content>
+              <Content>Element 3</Content>
+              <Content>Element 4</Content>
+              <Content>Element 5</Content>
             </Flex>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* FlexSpacer */}
           <Block>
             <code>FlexSpacer:</code>
             <div className={'padding-vertical-normal'} />
@@ -329,11 +227,11 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               right
             </div>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Image */}
           <Block>
             <code>Image:</code>
             <div className={'padding-vertical-normal'} />
@@ -344,40 +242,40 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               to={true}
             />
           </Block>
-
+          <Block first last>
+            <hr />
+          </Block>
+          {/* ImageInput */}
+          <Block>
+            <code>ImageInput:</code>
+            <div className={'padding-vertical-normal'} />
+            <ImageInput />
+          </Block>
           <Block first last>
             <hr />
           </Block>
 
+          {/* Input */}
           <Block>
             <code>Input:</code>
             <div className={'padding-vertical-normal'} />
             <Input label="This is an Input." />
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
-          <Block>
-            <code> Image Input </code>
-            <ImageInput />
-          </Block>
-
-          <Block first last>
-            <hr />
-          </Block>
-
+          {/* Loading */}
           <Block>
             <code>Loading:</code>
             <div className={'padding-vertical-normal'} />
             <Loading delay />
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* MenuDrop & MenuItem */}
           <Block>
             <code>MenuDrop &amp; MenuItem:</code>
             <div className={'padding-vertical-normal'} />
@@ -397,23 +295,102 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               <MenuItem>Inside a MenuDrop.</MenuItem>
             </MenuDrop>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Page */}
           <Block>
             <code>Page:</code>
             <div className={'padding-vertical-normal'} />
             <Page>This is a Page.</Page>
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Range */}
           <Block>
-            <code>Slide show</code>
+            <code>Range:</code>
+            <div className={'padding-vertical-normal'} />
+            <Range
+              absoluteMin={14}
+              absoluteMax={20}
+              inputMin={rangeMin}
+              inputMax={rangeMax}
+              roundValues
+              onMoved={e => this.setState({ rangeMin: e.min, rangeMax: e.max })}
+            />
+          </Block>
+          <Block first last>
+            <hr />
+          </Block>
+
+          {/* Select */}
+          <Block>
+            <code>Select:</code>
+            <div className={'padding-vertical-normal'} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                justifyContent: 'space-around'
+              }}
+            >
+              <div>
+                Single:
+                <div className={'padding-vertical-normal'} />
+                <Select
+                  options={[
+                    'Ethiopia',
+                    'Nigeria',
+                    'Kenya',
+                    'Uganda',
+                    'Somalia',
+                    'Zambia',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Malawi'
+                  ]}
+                  placeholder={'Choose your country....'}
+                  selectedvalue={this.handleSelect}
+                />
+              </div>
+              <div>
+                Multiple:
+                <div className={'padding-vertical-normal'} />
+                <Select
+                  options={[
+                    'Ethiopia',
+                    'Nigeria',
+                    'Kenya',
+                    'Uganda',
+                    'Somalia',
+                    'Zambia',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Congo',
+                    'Malawi'
+                  ]}
+                  placeholder={'Choose your country....'}
+                  selectedvalue={this.handleSelect}
+                  multiple={true}
+                />
+              </div>
+            </div>
+          </Block>
+          <Block first last>
+            <hr />
+          </Block>
+
+          {/* SlideShow */}
+          <Block>
+            <code>SlideShow:</code>
+            <div className={'padding-vertical-normal'} />
             <SlideShow
               Images={[
                 { Image: pic1, Caption: '' },
@@ -429,48 +406,31 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               animation={'fade'}
             />
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
-          <Block>
-            <code>Range:</code>
-            <div className={'padding-vertical-normal'} />
-            <Range
-              absoluteMin={14}
-              absoluteMax={20}
-              inputMin={rangeMin}
-              inputMax={rangeMax}
-              roundValues
-              onMoved={e => this.setState({ rangeMin: e.min, rangeMax: e.max })}
-            />
-          </Block>
-
-          <Block first last>
-            <hr />
-          </Block>
-
+          {/* TextArea */}
           <Block>
             <code>TextArea:</code>
             <div className={'padding-vertical-normal'} />
             <TextArea label="This is a TextArea." />
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Warning */}
           <Block>
             <code>Warning:</code>
             <div className={'padding-vertical-normal'} />
             <Warning shy problem="This is a Warning." />
           </Block>
-
           <Block first last>
             <hr />
           </Block>
 
+          {/* Yoga */}
           <Block>
             <code>Yoga:</code>
             <div className={'padding-vertical-normal'} />
@@ -482,7 +442,6 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               <Content>Element 5</Content>
             </Yoga>
           </Block>
-
           <Block last />
         </Content>
       </Page>
