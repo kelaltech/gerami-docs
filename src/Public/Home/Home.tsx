@@ -130,6 +130,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                 <code>Multiple:</code>
                 <div className={'padding-vertical-normal'} />
                 <Select
+                  size={'330px'}
                   options={[
                     'Ethiopia',
                     'Nigeria',
