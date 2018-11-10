@@ -123,13 +123,11 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
 
           {/* Checkbox */}
           <Block>
-            <code>CheckBox</code> <br />
+            <code>CheckBox:</code>
+            <div className={'padding-vertical-normal'} />
+            <CheckBox>This is a CheckBox.</CheckBox>
             <br />
-            Checked
-            <CheckBox checked={true} className={'checked'} />
-            <br />
-            Unchecked
-            <CheckBox checked={false} className={'unchecked'} />
+            <CheckBox checked>Checked, by default.</CheckBox>
           </Block>
           <Block first last>
             <hr />
@@ -159,7 +157,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block>
             <code>Drawer:</code>
             <div className={'padding-vertical-normal'} />
-            <div style={{ display: 'flex' }}>
+            <Flex>
               <Button onClick={() => this.setState({ isLeftDrawerOpen: true })}>
                 Open Left Drawer
               </Button>
@@ -169,7 +167,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               >
                 Open Right Drawer
               </Button>
-            </div>
+            </Flex>
             <Drawer
               align={'left'}
               onClose={() =>
@@ -219,13 +217,13 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block>
             <code>FlexSpacer:</code>
             <div className={'padding-vertical-normal'} />
-            <div style={{ display: 'flex' }}>
-              left
+            <Flex>
+              <Content style={{ flex: 1 }}>Element 1</Content>
               <FlexSpacer />
-              center
+              <Content style={{ flex: 1 }}>Element 2</Content>
               <FlexSpacer />
-              right
-            </div>
+              <Content style={{ flex: 1 }}>Element 3</Content>
+            </Flex>
           </Block>
           <Block first last>
             <hr />
@@ -318,7 +316,6 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
               absoluteMax={20}
               inputMin={rangeMin}
               inputMax={rangeMax}
-              roundValues
               onMoved={e => this.setState({ rangeMin: e.min, rangeMax: e.max })}
             />
           </Block>
@@ -356,7 +353,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                     'Malawi'
                   ]}
                   placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
+                  selectedValue={this.handleSelect}
                 />
               </div>
               <div>
@@ -377,7 +374,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                     'Malawi'
                   ]}
                   placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
+                  selectedValue={this.handleSelect}
                   multiple={true}
                 />
               </div>
@@ -392,15 +389,15 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <code>SlideShow:</code>
             <div className={'padding-vertical-normal'} />
             <SlideShow
-              Images={[
-                { Image: pic1, Caption: '' },
-                { Image: pic2, Caption: '' },
-                { Image: pic3, Caption: '' },
-                { Image: pic4, Caption: '' },
-                { Image: pic5, Caption: '' }
+              images={[
+                { image: pic1, caption: '' },
+                { image: pic2, caption: '' },
+                { image: pic3, caption: '' },
+                { image: pic4, caption: '' },
+                { image: pic5, caption: '' }
               ]}
               height={'200px'}
-              autoplay={true}
+              autoPlay={true}
               showControls={true}
               interval={5000}
               animation={'fade'}

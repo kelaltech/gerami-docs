@@ -2946,13 +2946,6 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
-"gerami@https://gitlab.com/kelal/_dev/gerami.git":
-  version "0.0.3"
-  resolved "https://gitlab.com/kelal/_dev/gerami.git#8986f46401d4093b5e179458047a34142aab4121"
-  dependencies:
-    "@fortawesome/fontawesome-free" "^5.3.1"
-    react-router-dom "^4.3.1"
-
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
