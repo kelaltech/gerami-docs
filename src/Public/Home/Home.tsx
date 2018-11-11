@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 import {
+  AccordionSlider,
   Anchor,
   Block,
   Button,
@@ -40,6 +41,31 @@ interface IHomeState {
   rangeMax: number
 }
 
+const ACCORDION_IMAGES = [
+  {
+    src: 'https://loremflickr.com/600/800/nature,city?random=1',
+    caption: 'first caption',
+    action: { headline: 'read more', to: 'http://google.com' }
+  },
+  {
+    src: 'https://loremflickr.com/600/800/nature,city?random=2',
+    caption: 'second caption'
+  },
+  {
+    src: 'https://loremflickr.com/600/800/nature,city?random=3',
+    caption: 'third caption'
+  },
+  {
+    src: 'https://loremflickr.com/600/800/nature,city?random=4',
+    caption: 'forth caption'
+  },
+  {
+    src: 'https://loremflickr.com/600/800/nature,city?random=5',
+    caption: 'fifth caption',
+    action: { headline: 'read more', to: 'google.com' }
+  }
+]
+
 export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
   state = {
     isLeftDrawerOpen: false,
@@ -70,6 +96,13 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <hr />
           </Block>
 
+          {/*AccordionSlider*/}
+          <Block>
+            <code>Accordion Slider:</code>
+            <div className={'padding-vertical-normal'} />
+            {/*<div className={'padding-vertical-normal'} />*/}
+            <AccordionSlider imgs={ACCORDION_IMAGES} />
+          </Block>
           {/* Anchor */}
           <Block>
             <code>Anchor:</code>
