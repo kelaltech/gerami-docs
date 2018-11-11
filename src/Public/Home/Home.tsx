@@ -123,7 +123,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                     'Malawi'
                   ]}
                   placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
+                  selectedValue={this.handleSelect}
                 />
               </div>
               <div>
@@ -145,7 +145,7 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                     'Malawi'
                   ]}
                   placeholder={'Choose your country....'}
-                  selectedvalue={this.handleSelect}
+                  selectedValue={this.handleSelect}
                   multiple={true}
                 />
               </div>
