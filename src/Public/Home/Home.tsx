@@ -94,7 +94,8 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block>
             <code>Button:</code>
             <div className={'padding-vertical-normal'} />
-            <Button>This is a Button.</Button>
+            <Button>This is a Button.</Button>{' '}
+            <Button primary>And, a Primary One.</Button>
           </Block>
           <Block first last>
             <hr />
