@@ -9,6 +9,7 @@ import {
   CheckBox,
   Container,
   Content,
+  Dialog,
   Drawer,
   Flex,
   FlexSpacer,
@@ -39,6 +40,7 @@ interface IHomeState {
   isMenuDropOpen: boolean
   rangeMin: number
   rangeMax: number
+  dialog: boolean
 }
 
 const ACCORDION_IMAGES = [
@@ -48,8 +50,7 @@ const ACCORDION_IMAGES = [
     action: { headline: 'read more', to: 'http://google.com' }
   },
   {
-    src: 'https://loremflickr.com/600/800/nature,city?random=2',
-    caption: 'second caption'
+    src: 'https://loremflickr.com/600/800/nature,city?random=2'
   },
   {
     src: 'https://loremflickr.com/600/800/nature,city?random=3',
@@ -72,12 +73,18 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
     isRightDrawerOpen: false,
     isMenuDropOpen: false,
     rangeMin: 15,
-    rangeMax: 19
+    rangeMax: 19,
+    dialog: false
   }
 
   boxStyle = { width: 70, height: 70 }
   handleSelect = (value: any) => {
     console.log(value)
+  }
+  handleDialog = () => {
+    this.setState({
+      dialog: !this.state.dialog
+    })
   }
   render() {
     const {
@@ -94,6 +101,21 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block first last>
             <h3 className={'fg-blackish'}>The Components</h3>
             <hr />
+          </Block>
+
+          {/*Dialog*/}
+          <Block>
+            <Button onClick={this.handleDialog}>show dialog</Button>
+            <code>Dialog box:</code>
+            <div className={'padding-vertical-normal'} />
+            <Dialog className={'hey'} bottom={true} open={this.state.dialog}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deserunt id iste necessitatibus odit officia porro repellendus
+                reprehenderit vitae. Dignissimos dolor dolorum eos illum impedit
+                magni obcaecati, odio perferendis quibusdam saepe!
+              </p>
+            </Dialog>
           </Block>
 
           {/*AccordionSlider*/}
@@ -374,17 +396,38 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                 <div className={'padding-vertical-normal'} />
                 <Select
                   options={[
-                    'Ethiopia',
-                    'Nigeria',
-                    'Kenya',
-                    'Uganda',
-                    'Somalia',
-                    'Zambia',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Malawi'
+                    {
+                      name: 'Ethiopia',
+                      value: 'Et'
+                    },
+                    {
+                      name: 'Nigeria',
+                      value: 'NG'
+                    },
+                    {
+                      name: 'Kenya',
+                      value: 'KE'
+                    },
+                    {
+                      name: 'Uganda',
+                      value: 'UG'
+                    },
+                    {
+                      name: 'Somalia',
+                      value: 'SM'
+                    },
+                    {
+                      name: 'Zambia',
+                      value: 'ZM'
+                    },
+                    {
+                      name: 'Congo',
+                      value: 'CG'
+                    },
+                    {
+                      name: 'Malawi',
+                      value: 'ML'
+                    }
                   ]}
                   placeholder={'Choose your country....'}
                   selectedValue={this.handleSelect}
@@ -395,17 +438,38 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
                 <div className={'padding-vertical-normal'} />
                 <Select
                   options={[
-                    'Ethiopia',
-                    'Nigeria',
-                    'Kenya',
-                    'Uganda',
-                    'Somalia',
-                    'Zambia',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Congo',
-                    'Malawi'
+                    {
+                      name: 'Ethiopia',
+                      value: 'Et'
+                    },
+                    {
+                      name: 'Nigeria',
+                      value: 'NG'
+                    },
+                    {
+                      name: 'Kenya',
+                      value: 'KE'
+                    },
+                    {
+                      name: 'Uganda',
+                      value: 'UG'
+                    },
+                    {
+                      name: 'Somalia',
+                      value: 'SM'
+                    },
+                    {
+                      name: 'Zambia',
+                      value: 'ZM'
+                    },
+                    {
+                      name: 'Congo',
+                      value: 'CG'
+                    },
+                    {
+                      name: 'Malawi',
+                      value: 'ML'
+                    }
                   ]}
                   placeholder={'Choose your country....'}
                   selectedValue={this.handleSelect}
