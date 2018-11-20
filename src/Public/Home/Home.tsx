@@ -23,6 +23,7 @@ import {
   Input,
   SlideShow,
   TextArea,
+  Toggle,
   Warning,
   Select,
   Yoga
@@ -184,6 +185,16 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
             <CheckBox>This is a CheckBox.</CheckBox>
             <br />
             <CheckBox checked>Checked, by default.</CheckBox>
+          </Block>
+          <Block first last>
+            <hr />
+          </Block>
+
+          {/* Toggle */}
+          <Block>
+            <code>Toggle:</code>
+            <div className={'padding-vertical-normal'} />
+            <Toggle>Checked, by default.</Toggle>
           </Block>
           <Block first last>
             <hr />
