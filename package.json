@@ -4,10 +4,6 @@
   "author": "kelal tech. (kelaltech.com) <kelaltech@gmail.com>",
   "license": "MIT",
   "private": true,
-  "engines": {
-    "node": "^10.7",
-    "yarn": "^1.5"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
     "@types/dotenv": "^4.0.3",
