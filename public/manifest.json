@@ -9,12 +9,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-256x256.png",
+      "src": "logo-256.png",
       "sizes": "256x256 192x192 152x152 144x144 128x128",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#0078B4",
   "background_color": "#f2f2f2"
