@@ -75,30 +75,30 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
 
           {/* AccordionSlider */}
           <Block>
-            <code>Accordion Slider:</code>
+            <code>AccordionSlider:</code>
             <div className={'padding-vertical-normal'} />
             <AccordionSlider
               imgs={[
                 {
                   src: pic1,
-                  caption: 'first caption',
-                  action: { headline: 'read more', to: 'http://google.com' },
+                  caption: "Mother's Love for Her Daughter",
+                  action: { headline: 'Read More...', to: '/' },
                 },
                 {
                   src: pic2,
+                  caption: 'Fountain',
                 },
                 {
                   src: pic3,
-                  caption: 'third caption',
+                  caption: 'The Biggest Animal on Earth',
                 },
                 {
                   src: pic4,
-                  caption: 'forth caption',
                 },
                 {
                   src: pic5,
-                  caption: 'fifth caption',
-                  action: { headline: 'read more', to: 'google.com' },
+                  caption: 'White Mountain',
+                  action: { headline: 'Read More...', to: '/' },
                 },
               ]}
             />
