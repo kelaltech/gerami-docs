@@ -195,18 +195,18 @@ export class Home extends Component<RouteComponentProps<{}>, IHomeState> {
           <Block>
             <code>Dialog:</code>
             <div className={'padding-vertical-normal'} />
-            <Button onClick={this.handleDialog}>show dialog</Button>
+            <Button onClick={this.handleDialog}>Open Dialog</Button>
             <Dialog
               className={'hey'}
               bottom={true}
               open={this.state.isDialogOpen}
             >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deserunt id iste necessitatibus odit officia porro repellendus
-                reprehenderit vitae. Dignissimos dolor dolorum eos illum impedit
-                magni obcaecati, odio perferendis quibusdam saepe!
-              </p>
+              <Block first last>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                animi assumenda aut autem consequatur cum dolorem exercitationem
+                facilis fuga, fugit illum libero minus nisi qui quis repudiandae
+                sapiente tenetur totam?
+              </Block>
             </Dialog>
           </Block>
           <Block first last>

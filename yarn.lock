@@ -784,11 +784,6 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.12.tgz#42baa71f97ca06faeb0b6718fa5ed20c5eefdf07"
   integrity sha512-ISLNpEx6fhJTYYkvBeo/4DHeL5EIA+VybJoOOnH67m6uXt6V6VFizdEN4qchHagNIeZfzI0LnA22gk0wbVPv/g==
 
-"@fortawesome/fontawesome-free@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.5.0.tgz#0c6c53823d04457ae669cd19567b8a21dbb4fcfd"
-  integrity sha512-p4lu0jfj5QN013ddArh99r3OXZ/fp9rbovs62LfaO70OMBsAXxtNd0lAq/97fitrscR0fqfd+/a5KNcp6Sh/0A==
-
 "@fortawesome/fontawesome-svg-core@^1.2.12":
   version "1.2.12"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.12.tgz#9732617b1e484435f6946645d7f9ad248f12c437"
@@ -4126,11 +4121,10 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
-"gerami@https://gitlab.com/kelal/_dev/gerami.git":
-  version "0.1.0"
-  resolved "https://gitlab.com/kelal/_dev/gerami.git#2bed40786211fc6c65cb1e4181db8375525036fc"
-  dependencies:
-    react-router-dom "^4.3.1"
+gerami@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gerami/-/gerami-0.1.1.tgz#2fa947c6068d08185a8961b041163af58405cb2d"
+  integrity sha512-QhuFsq/AANPFMzajge3sDcPtBAYXL+M6KMXzVE8FBURfHwusnBshvucYkV4zf3QjpWKbuDmULwE9mS/3BdZ9xA==
 
 get-caller-file@^1.0.1:
   version "1.0.3"

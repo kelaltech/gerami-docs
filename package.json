@@ -5,7 +5,6 @@
   "private": false,
   "licence": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
     "@fortawesome/free-regular-svg-icons": "^5.6.3",
@@ -19,7 +18,7 @@
     "@types/react-router-dom": "^4.3.1",
     "animate.css": "^3.7.0",
     "aos": "^2.3.4",
-    "gerami": "https://gitlab.com/kelal/_dev/gerami.git",
+    "gerami": "^0.1.1",
     "husky": "^1.2.0",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.4",
