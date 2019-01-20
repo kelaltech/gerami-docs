@@ -82,7 +82,12 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
             align="right"
           >
             <Block className="font-S">
-              <Anchor to="/" title="gerami home" style={{ textDecoration: 'none' }}>
+              <Anchor
+                to="/"
+                title="gerami home"
+                style={{ textDecoration: 'none' }}
+                onClick={() => this.setState({ isNavOpen: false })}
+              >
                 <span className="fg-primary">gerami</span>{' '}
                 <span className="fg-blackish">react components</span>
               </Anchor>
