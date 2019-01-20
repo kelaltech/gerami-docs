@@ -18,7 +18,7 @@ export default class NotFound extends Component<RouteComponentProps<{}>, {}> {
           <Block>
             Seems like the requested page,{' '}
             <Anchor to={location.pathname}>
-              <code className="fg-whitish bg-accent">{location.pathname}</code>
+              <code className="fg-accent">{location.pathname}</code>
             </Anchor>
             , was not found.
           </Block>

@@ -13,9 +13,9 @@ export default class DefaultPromotion extends Component<{}, {}> {
             <Image className="default-promotion-logo" src={logo256} size="XL" />
           </div>
           <h1 className="padding-big center light">
-            <span>gerami</span> <span style={{ opacity: 0.7 }}>is brought to you by</span>{' '}
+            <span>gerami</span> <span className="fg-whitish">is brought to you by</span>{' '}
             <span style={{ fontFamily: 'Kelal Wordmark' }}>kelal OpenDev</span>
-            <span style={{ opacity: 0.7 }}>.</span>
+            <span className="fg-whitish">.</span>
           </h1>
         </div>
       </div>

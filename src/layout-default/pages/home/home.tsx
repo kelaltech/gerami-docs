@@ -67,8 +67,8 @@ export default class Home extends Component<RouteComponentProps<{}>, IHomeState>
     } = this.state
 
     return (
-      <Page top={'auto'}>
-        <Content size={'L'}>
+      <Page>
+        <Content size={'XXL'}>
           <Block first last>
             <h3 className={'fg-blackish'}>The Components</h3>
             <hr />

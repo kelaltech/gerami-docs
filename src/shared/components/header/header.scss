@@ -29,7 +29,6 @@
   margin-bottom: -8px;
   width: 36px;
   height: 36px;
-  background-size: cover; // todo: move this background-size to gerami v0.1.2
 }
 
 .header-separator {
@@ -99,7 +98,6 @@
 .header-nav-drop {
   .gerami-menu {
     max-height: 80vh;
-    overflow-y: auto; // todo: move this line to gerami v0.1.2
   }
 }
 
