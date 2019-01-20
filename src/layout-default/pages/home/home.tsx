@@ -143,18 +143,32 @@ export default class Home extends Component<RouteComponentProps<{}>, IHomeState>
           <Block>
             <code>Card:</code>
             <div className={'padding-vertical-normal'} />
-            <Card
-              imgSrc={pic1}
-              title={'Card Title'}
-              subtitle={'Card Subtitle'}
-              actions={[
-                <span>Action Text</span>,
-                <FlexSpacer />,
-                <Anchor>Action Anchor</Anchor>
-              ]}
-            >
-              This is a Card.
-            </Card>
+            <Yoga maxCol={2}>
+              <Card
+                imgSrc={pic1}
+                title={'Card Title 1'}
+                subtitle={'Card Subtitle 1'}
+                actions={[
+                  <span>Action Text</span>,
+                  <FlexSpacer />,
+                  <Anchor>Action Anchor</Anchor>
+                ]}
+              >
+                This is a Card.
+              </Card>
+              <Card
+                imgSrc={pic2}
+                title={'Card Title 2'}
+                subtitle={'Card Subtitle 2'}
+                actions={[
+                  <span>Action Text</span>,
+                  <FlexSpacer />,
+                  <Anchor>Action Anchor</Anchor>
+                ]}
+              >
+                This is another Card.
+              </Card>
+            </Yoga>
           </Block>
           <Block first last>
             <hr />

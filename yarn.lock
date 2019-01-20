@@ -4296,10 +4296,10 @@ gaze@^1.0.0:
   dependencies:
     globule "^1.0.0"
 
-gerami@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/gerami/-/gerami-0.1.1.tgz#2fa947c6068d08185a8961b041163af58405cb2d"
-  integrity sha512-QhuFsq/AANPFMzajge3sDcPtBAYXL+M6KMXzVE8FBURfHwusnBshvucYkV4zf3QjpWKbuDmULwE9mS/3BdZ9xA==
+gerami@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gerami/-/gerami-0.1.2.tgz#b6fceb66a7c8c989eeec6c88e098b92caf4c0faa"
+  integrity sha512-efSlfL0MBAIAkRG/1e0t7b5bWi9xg7nQecDO7kpI+S6kc8apjaurGFXPlJL6IFtoypE9vBD0IVOZtIqEeknM3A==
 
 get-caller-file@^1.0.1:
   version "1.0.3"
