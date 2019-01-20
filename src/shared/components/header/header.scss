@@ -1,5 +1,15 @@
 @import '../../../assets/styles/theme';
 
+@keyframes HeaderBlockClip {
+  0% {
+    clip-path: ellipse(140% 100% at 70% 0px);
+  }
+
+  100% {
+    clip-path: ellipse(140% 100% at 30% 0px);
+  }
+}
+
 .header {
   z-index: 7;
   position: sticky;
@@ -22,6 +32,11 @@
   box-shadow: none;
   transform: scale3d(1, 1, 1);
   clip-path: ellipse(140% 100% at 50% 0px);
+  animation-name: HeaderBlockClip;
+  animation-duration: 7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .header-logo {
