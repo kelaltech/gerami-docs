@@ -2,29 +2,28 @@ import React, { Component, ReactNode } from 'react'
 import { Page, Warning } from 'gerami'
 import { MinHeightProperty } from 'csstype'
 
-import { INavigationItem } from './interfaces'
-import Header from '../header/header'
+import Header, { IHeaderProps } from '../header/header'
 import Footer from '../footer/footer'
 
 interface ILayoutProps {
+  error?: any
+  contentMinHeight?: MinHeightProperty<string | number>
+  headerOptions?: IHeaderProps
   overrideHeader?: ReactNode
   overrideFooter?: ReactNode
-  navigation?: INavigationItem[]
-  error?: any
   preHeader?: ReactNode
-  contentMinHeight?: MinHeightProperty<string | number>
 }
 
 export default class Layout extends Component<ILayoutProps, {}> {
   render() {
     const {
       children,
+      contentMinHeight,
+      error,
+      headerOptions,
       overrideHeader,
       overrideFooter,
-      navigation,
-      error,
-      preHeader,
-      contentMinHeight
+      preHeader
     } = this.props
 
     return error ? (
@@ -34,7 +33,7 @@ export default class Layout extends Component<ILayoutProps, {}> {
     ) : (
       <div>
         {preHeader}
-        {overrideHeader || <Header navigation={navigation} />}
+        {overrideHeader || <Header {...headerOptions} />}
         <div style={{ minHeight: contentMinHeight || '100vh' }}>{children}</div>
         {overrideFooter || <Footer />}
       </div>

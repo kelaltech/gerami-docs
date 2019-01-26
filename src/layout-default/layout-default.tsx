@@ -18,7 +18,9 @@ export default class LayoutDefault extends Component<ILayoutDefaultProps, {}> {
     return (
       <Layout
         preHeader={<DefaultPromotion />}
-        navigation={layoutDefaultNavigation(false)}
+        headerOptions={{
+          navigation: layoutDefaultNavigation(false)
+        }}
         error={error}
         contentMinHeight={contentMinHeight}
       >
