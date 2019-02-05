@@ -7,7 +7,7 @@ import Footer from '../footer/footer'
 
 interface ILayoutProps {
   error?: any
-  contentMinHeight?: MinHeightProperty<string | number>
+  nonContentHeight?: MinHeightProperty<string | number>
   headerOptions?: IHeaderProps
   overrideHeader?: ReactNode
   overrideFooter?: ReactNode
@@ -18,13 +18,17 @@ export default class Layout extends Component<ILayoutProps, {}> {
   render() {
     const {
       children,
-      contentMinHeight,
+      nonContentHeight: nch,
       error,
       headerOptions,
       overrideHeader,
       overrideFooter,
       preHeader
     } = this.props
+
+    const contentMinHeight = nch
+      ? `calc(100vh - ${nch}${typeof nch === 'number' ? 'px' : ''})`
+      : `100vh`
 
     return error ? (
       <Page>
@@ -34,7 +38,7 @@ export default class Layout extends Component<ILayoutProps, {}> {
       <div>
         {preHeader}
         {overrideHeader || <Header {...headerOptions} />}
-        <div style={{ minHeight: contentMinHeight || '100vh' }}>{children}</div>
+        <div style={{ minHeight: contentMinHeight }}>{children}</div>
         {overrideFooter || <Footer />}
       </div>
     )

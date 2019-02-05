@@ -44,7 +44,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
     return (
       <header className={`header ${className || ''}`} style={style}>
         <div className="header-shade-area">
-          <Block first last className="header-block bold bg-white flex">
+          <Block className="header-block bg-white flex">
             {overrideLeftNode === null
               ? undefined
               : overrideLeftNode || (
@@ -70,7 +70,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
                             className="header-wordmark middle"
                             title="gerami home"
                           >
-                            <span className="fg-primary">gerami</span>{' '}
+                            <span className="fg-primary bold">gerami</span>{' '}
                             <span className="fg-blackish">react components</span>
                           </Anchor>
                         )}
@@ -93,8 +93,8 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
                         >
                           <div className="flex">
                             <span className="center">
-                              <FontAwesomeIcon icon={navRoute.icon} />
-                              <span className="padding-horizontal-small" />
+                              <FontAwesomeIcon icon={navRoute.icon} className="font-S" />
+                              <span className="padding-horizontal-normal" />
                               {navRoute.shortName || navRoute.name}
                             </span>
                           </div>
@@ -135,7 +135,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
                   style={{ textDecoration: 'none' }}
                   onClick={() => this.setState({ isNavOpen: false })}
                 >
-                  <span className="fg-primary">gerami</span>{' '}
+                  <span className="fg-primary bold">gerami</span>{' '}
                   <span className="fg-blackish">react components</span>
                 </Anchor>
               </Block>

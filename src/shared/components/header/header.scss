@@ -21,7 +21,7 @@
 }
 
 .header-block {
-  padding: ($space / 1.03) $space ($space * 1.03) !important;
+  padding: ($space / 1.4) $space !important;
   background-image: linear-gradient(
     to top right,
     transparentize($accent, 0.97),
@@ -42,14 +42,19 @@
 .header-logo {
   margin-top: -4px;
   margin-bottom: -8px;
-  width: 36px;
-  height: 36px;
+  width: $font-L * 1.5;
+  height: $font-L * 1.5;
 }
 
 .header-separator {
   padding: 0 ($space / 1.4);
   font-size: $font-L;
   opacity: 0.07;
+
+  @media (max-width: $mobile) {
+    visibility: hidden;
+    padding: 0 $space / 2;
+  }
 }
 
 .header-wordmark {
@@ -73,9 +78,9 @@
 }
 
 .header-nav-links {
-  margin-top: -24px;
-  margin-bottom: -24px;
-  height: 48px;
+  margin: (-$space * 1.5) 0;
+  padding-right: $space / 2;
+  height: $space * 3;
   text-decoration: none !important;
 
   .flex {

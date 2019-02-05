@@ -10,19 +10,37 @@ interface ILayoutDefaultProps extends RouteComponentProps<{}> {
   error?: any
 }
 
-export default class LayoutDefault extends Component<ILayoutDefaultProps, {}> {
+interface ILayoutDefaultState {
+  promo?: React.ReactNode
+}
+
+export default class LayoutDefault extends Component<
+  ILayoutDefaultProps,
+  ILayoutDefaultState
+> {
+  state: ILayoutDefaultState = {
+    promo: undefined
+  }
+
+  componentDidMount() {
+    if (window.sessionStorage.getItem('promoSeen') != 'true') {
+      this.setState({ promo: <DefaultPromotion /> })
+      window.sessionStorage.setItem('promoSeen', 'true')
+    }
+  }
+
   render() {
     const { error, match } = this.props
-    const contentMinHeight = window.innerHeight ? window.innerHeight - 164 : 0
+    const { promo } = this.state
 
     return (
       <Layout
-        preHeader={<DefaultPromotion />}
+        preHeader={promo}
         headerOptions={{
           navigation: layoutDefaultNavigation(false)
         }}
         error={error}
-        contentMinHeight={contentMinHeight}
+        nonContentHeight={164}
       >
         <LayoutDefaultRoutes prefix={match.url} />
       </Layout>
