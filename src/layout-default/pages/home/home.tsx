@@ -303,7 +303,9 @@ export default class Home extends Component<RouteComponentProps<{}>, IHomeState>
             <div className={'padding-vertical-normal'} />
             <Image
               src={kelalTechLogo}
-              style={this.boxStyle}
+              width={this.boxStyle.width}
+              height={this.boxStyle.height}
+              backgroundSize={'contain'}
               title={`kelal tech.'s Logo`}
               to={true}
             />
