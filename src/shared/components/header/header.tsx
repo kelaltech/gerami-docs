@@ -70,7 +70,7 @@ export default class Header extends Component<IHeaderProps, IHeaderState> {
                             className="header-wordmark middle"
                             title="gerami home"
                           >
-                            <span className="fg-primary bold">gerami</span>{' '}
+                            <span className="fg-primary bold">GERAMI</span>{' '}
                             <span className="fg-blackish">react components</span>
                           </Anchor>
                         )}

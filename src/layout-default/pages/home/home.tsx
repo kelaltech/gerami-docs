@@ -555,7 +555,7 @@ export default class Home extends Component<RouteComponentProps<{}>, IHomeState>
           <Block>
             <code>Yoga:</code>
             <div className={'padding-vertical-normal'} />
-            <Yoga maxCol={3}>
+            <Yoga maxCol={3} noFirst noLast>
               <Content>Element 1</Content>
               <Content>Element 2</Content>
               <Content>Element 3</Content>
